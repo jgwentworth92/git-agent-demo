@@ -7,5 +7,5 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 - App shell: nav config, router with page auto-discovery, layout.
-- Home page (the thesis) and Three Ways page.
+- Home page: the thesis and the three ways agents drive git.
 - Ticket backlog data with validation script.

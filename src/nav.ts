@@ -17,13 +17,6 @@ export const NAV: NavEntry[] = [
   },
 
   {
-    path: "/three-ways",
-    label: "Three Ways",
-    page: "ThreeWays",
-    comingSoon: false,
-  },
-
-  {
     path: "/worktrees",
     label: "Worktree Playground",
     page: "WorktreePlayground",
