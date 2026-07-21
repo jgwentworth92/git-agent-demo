@@ -1,0 +1,12 @@
+[
+  { "id": 3,  "title": "Choose stack for the demo site",            "status": "done",        "date": "2026-07-01" },
+  { "id": 7,  "title": "Write the thesis copy for the home page",   "status": "done",        "date": "2026-07-02" },
+  { "id": 12, "title": "Explain CLI vs scripts vs MCP",             "status": "done",        "date": "2026-07-04" },
+  { "id": 19, "title": "Ticket data model and validation",          "status": "done",        "date": "2026-07-06" },
+  { "id": 23, "title": "CI pipeline: validate + build",             "status": "done",        "date": "2026-07-08" },
+  { "id": 28, "title": "Worktree Playground page",                  "status": "todo",        "date": "2026-07-10" },
+  { "id": 31, "title": "History Explorer page",                     "status": "todo",        "date": "2026-07-11" },
+  { "id": 36, "title": "Dark mode pass",                            "status": "in-progress", "date": "2026-07-13" },
+  { "id": 42, "title": "Import backlog from the old tracker",       "status": "done",        "date": "2026-07-15" },
+  { "id": 47, "title": "Write the changelog for the first release", "status": "in-progress", "date": "2026-07-17" }
+]
