@@ -1,13 +1,15 @@
 # git-agent-demo
 
-The demo site for "Git is the agent's memory" — a live demo of GitHub + Claude Code
-with worktrees and parallel development as the centerpiece. The site explains the
-demo's concepts and is itself the repo the agents modify live.
+A single-page slide deck for "Git is the agent's memory". The deck is also the
+demo: it gets modified live — from worktrees, through pull requests, with CI
+watching main.
 
 ## Run it
 
     pnpm install
     pnpm dev
+
+Arrow keys (or the screen edges) move between slides.
 
 ## Checks
 

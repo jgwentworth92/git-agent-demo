@@ -6,6 +6,8 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Added
-- App shell: nav config, router with page auto-discovery, layout.
-- Home page: the thesis and the three ways agents drive git.
+- Slide deck: title, claims, three-ways, worktrees, backlog, and recap slides.
 - Ticket backlog data with validation script.
+
+### Changed
+- Converted the site from routed pages to a single-page slide deck.
