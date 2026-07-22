@@ -1,8 +1,8 @@
 const POINTS = [
-  ["Memory", "history and ADRs answer why."],
-  ["Search index", "git log -S finds when."],
-  ["Coordination", "worktrees build in parallel while main stays stable."],
-  ["Safety net", "revert makes mistakes cheap."],
+  ["Memory", "reads history to learn why."],
+  ["Search index", "queries git log -S to find when."],
+  ["Coordination", "parallelizes in worktrees."],
+  ["Safety net", "undoes mistakes in one revert."],
 ] as const;
 
 export default function Recap() {

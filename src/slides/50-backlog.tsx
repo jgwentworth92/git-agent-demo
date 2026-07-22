@@ -5,10 +5,11 @@ export default function Backlog() {
   const rows = [...tickets].sort((a, b) => (a.id < b.id ? 1 : -1));
   return (
     <div className="space-y-6">
-      <h1 className="text-3xl font-bold tracking-tight">The backlog is data — and data is commits</h1>
+      <h1 className="text-3xl font-bold tracking-tight">The repo is the agent's database</h1>
       <p className="text-muted-foreground">
-        src/data/tickets.json is the single source of truth, validated by
-        tests/validate.mjs on every push. Change it wrong and main goes red.
+        Agents read and write tickets.json like any state store — but every write is a
+        commit, and CI validates it. The repo rejects bad data no matter who commits
+        it, agent or human.
       </p>
       <div className="space-y-2">
         {rows.map((t) => (

@@ -18,10 +18,11 @@ export default function Worktrees() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-3xl font-bold tracking-tight">Worktrees: one store, many working copies</h1>
+      <h1 className="text-3xl font-bold tracking-tight">Parallel agents, one repository</h1>
       <p className="text-muted-foreground">
-        Each worktree checks out its own branch — agents work in parallel, and a broken
-        sibling never touches main.
+        Each agent gets its own worktree on its own branch — a full working copy backed
+        by one shared object store. A broken agent never reaches main, and the
+        presentation you're watching runs from main the whole time.
       </p>
       <div className="flex gap-2">
         <Button onClick={() => setCount((c) => Math.min(c + 1, BRANCH_POOL.length))}>
