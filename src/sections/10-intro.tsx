@@ -8,6 +8,11 @@ export default function Intro() {
         For a human, git is version control. For an AI agent, git + GitHub is also its
         memory, its search index, its coordination layer, and its safety net.
       </p>
+      <p className="max-w-2xl text-muted-foreground">
+        This page is the presentation — and the repository behind it is the demo.
+        Agents modify both while you watch: they answer questions from its history,
+        build new sections in parallel worktrees, and repair it when a human breaks it.
+      </p>
     </div>
   );
 }

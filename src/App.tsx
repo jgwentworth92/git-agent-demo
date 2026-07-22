@@ -38,23 +38,19 @@ function SectionShell({
   children: ReactNode;
 }) {
   const ref = useRef<HTMLElement>(null);
-  const drift = ref.current ? (scrollY - ref.current.offsetTop) * 0.25 : 0;
+  const drift = ref.current ? (scrollY - ref.current.offsetTop) * 0.15 : 0;
   return (
-    <section
-      id={slug}
-      ref={ref}
-      className="relative flex min-h-screen items-center overflow-hidden border-b"
-    >
+    <section id={slug} ref={ref} className="relative overflow-hidden border-b">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 flex items-center justify-end pr-4"
         style={{ transform: `translateY(${drift}px)` }}
       >
-        <span className="select-none font-mono text-[14rem] font-bold leading-none text-muted-foreground/10 sm:text-[18rem]">
+        <span className="select-none font-mono text-[10rem] font-bold leading-none text-muted-foreground/10 sm:text-[14rem]">
           {String(index + 1).padStart(2, "0")}
         </span>
       </div>
-      <div className="relative mx-auto w-full max-w-4xl px-8 py-24">{children}</div>
+      <div className="relative mx-auto w-full max-w-4xl px-8 py-20">{children}</div>
     </section>
   );
 }
