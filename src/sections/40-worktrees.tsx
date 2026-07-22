@@ -21,10 +21,13 @@ export default function Worktrees() {
   return (
     <div className="space-y-6">
       <h1 className="text-3xl font-bold tracking-tight">Parallel agents, one repository</h1>
-      <p className="max-w-2xl text-muted-foreground">
-        Each agent gets its own worktree on its own branch — a full working copy backed
-        by one shared object store. A broken agent never reaches main, and the
-        presentation you're watching runs from main the whole time.
+      <p className="max-w-3xl text-muted-foreground">
+        A worktree is an additional working copy of the same repository: its own
+        checked-out branch and files, backed by the one shared object store. That
+        makes it the natural unit of agent parallelism — an orchestrator can give
+        each agent a full checkout of its own, none of them can touch what the
+        others (or the presenter) have checked out, and creating one is instant
+        because nothing is re-cloned.
       </p>
       <pre className="w-fit rounded-md border bg-muted px-4 py-3 font-mono text-xs text-muted-foreground">
         {`git worktree add ../wt-feature -b feat/new-section
@@ -79,6 +82,13 @@ git push && gh pr create             # merges back like any PR`}
           </svg>
         </CardContent>
       </Card>
+      <p className="max-w-3xl text-sm text-muted-foreground">
+        This page exercises the pattern on itself: asked for a new section that must
+        not disturb the running presentation, an agent builds it in a worktree and
+        merges it through a reviewed pull request. Each section is one file, so
+        parallel merges cannot conflict — a convention chosen for exactly this
+        reason and recorded in the repo's CLAUDE.md.
+      </p>
     </div>
   );
 }

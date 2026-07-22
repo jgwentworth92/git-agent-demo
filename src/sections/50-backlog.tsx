@@ -8,15 +8,19 @@ export default function Backlog() {
   return (
     <div className="space-y-6">
       <h1 className="text-3xl font-bold tracking-tight">The repo is the agent's database</h1>
-      <p className="max-w-2xl text-muted-foreground">
-        Agents read and write tickets.json like any state store — but every write is a
-        commit, and CI validates it. The repo rejects bad data no matter who commits
-        it, agent or human.
+      <p className="max-w-3xl text-muted-foreground">
+        This project's ticket backlog is a flat JSON file in the repository. An
+        agent directed to change project data works on it like any state store —
+        with one difference: every write is a commit. Data changes show up in
+        history, diffs, and blame exactly like code, and CI validates each push, so
+        the repo rejects bad data no matter who commits it, agent or human.
       </p>
-      <p className="max-w-2xl text-sm text-muted-foreground/80">
-        The shape is deliberate: a flat JSON file (docs/adr/0002) so every change is a
-        readable diff, and tests/validate.mjs runs on every push so a bad write turns
-        main red within a minute.
+      <p className="max-w-3xl text-sm text-muted-foreground/80">
+        The shape is deliberate: flat JSON (docs/adr/0002) keeps every change a
+        readable diff, and tests/validate.mjs enforces the record format on every
+        push. An agent changing this data follows the same path a colleague would —
+        read the ADR, edit the file, run the validator, commit with a conventional
+        message. Break the format and main turns red within a minute.
       </p>
       <div className="space-y-2">
         {rows.map((t) => (

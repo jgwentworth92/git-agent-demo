@@ -1,22 +1,22 @@
-export const title = "Recap";
+export const title = "Summary";
 
 const POINTS = [
-  ["Memory", "reads history to learn why."],
-  ["Search index", "queries git log -S to find when."],
-  ["Coordination", "parallelizes in worktrees."],
-  ["Safety net", "undoes mistakes in one revert."],
+  ["Memory", "commit messages, blame, and ADRs give it the why behind code."],
+  ["Search index", "log -S, grep, and --follow pin down the when."],
+  ["Coordination", "worktrees isolate parallel work; pull requests integrate it under review."],
+  ["Safety net", "small commits, CI, and revert make every mistake recoverable."],
 ] as const;
 
 export default function Recap() {
   return (
-    <div className="space-y-8 text-center">
-      <h1 className="text-4xl font-bold tracking-tight">
+    <div className="space-y-6">
+      <h1 className="text-3xl font-bold tracking-tight">
         For an agent, git is the whole operating environment.
       </h1>
-      <ul className="space-y-2 text-lg text-muted-foreground">
-        {POINTS.map(([title, line]) => (
-          <li key={title}>
-            <span className="font-medium text-foreground">{title}</span> — {line}
+      <ul className="max-w-3xl space-y-2 text-muted-foreground">
+        {POINTS.map(([name, line]) => (
+          <li key={name}>
+            <span className="font-medium text-foreground">{name}</span> — {line}
           </li>
         ))}
       </ul>
