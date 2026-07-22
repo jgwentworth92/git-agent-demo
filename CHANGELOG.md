@@ -11,3 +11,4 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Changed
 - Converted the site from routed pages to a single-page slide deck.
+- Slides became scrolling sections: sticky nav, smooth scrolling, parallax backdrop.

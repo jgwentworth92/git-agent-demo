@@ -1,3 +1,5 @@
+export const title = "Backlog";
+
 import { Badge } from "@/components/ui/badge";
 import tickets from "@/data/tickets.json";
 

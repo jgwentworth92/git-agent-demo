@@ -1,3 +1,5 @@
+export const title = "What agents do";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const CLAIMS = [

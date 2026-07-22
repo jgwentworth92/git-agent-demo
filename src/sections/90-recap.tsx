@@ -1,3 +1,5 @@
+export const title = "Recap";
+
 const POINTS = [
   ["Memory", "reads history to learn why."],
   ["Search index", "queries git log -S to find when."],

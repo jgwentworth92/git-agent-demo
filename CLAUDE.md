@@ -9,10 +9,12 @@
 - Branches: `feat/<slug>`. Open PRs with `gh pr create`.
 
 ## Architecture
-- The site is a single-page slide deck. Slides live in `src/slides/<NN>-<slug>.tsx`
-  (default export) and are auto-discovered and ordered by filename.
-- To add a slide, add ONE new file using an unused number — gaps are deliberate
-  (60 fits between 50 and 90). Never renumber or edit another slide's file.
+- The site is a single-page scrolling presentation. Sections live in
+  `src/sections/<NN>-<slug>.tsx`, each default-exporting its component and exporting
+  `const title` (the nav label). They are auto-discovered and ordered by filename;
+  the nav links scroll to each section.
+- To add a section, add ONE new file using an unused number — gaps are deliberate
+  (60 fits between 50 and 90). Never renumber or edit another section's file.
 - shadcn/ui components are vendored in `src/components/ui/` — use them.
 
 ## Before every commit
